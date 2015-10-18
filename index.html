@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Metronome</title>
+        <meta name="description" content="A metronome app">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <!-- upper section with metronome graphic and controls -->
+                <div id="metronome-container">
+                    <div class="about">
+                        <button type="button" class="about-btn" data-toggle="popover" title="Metronome" data-placement="right" data-content="My goal was to create a metronome that can be used on stage during a performance and runs continuously until the user clicks stop. The tempo range is between 80 and 240 bpm with a default value of 120 bpm. I have purposely used a black background so that it doesn't interfere with the stage lighting and is also easier on the eyes for the musicians on stage. The start button turns black after it is turned on to prevent distraction. The beats are displayed as well as the ticking metronome so there are ample visual cues with which to follow along. Beat 1 is red as an additional visual cue. I created a very simple and intuitive UI that is fully responsive to allow for various devices (e.g. the drummer on an iPad and the guitarist on a bigger screen laptop). The displayed beats per minute is an editable number input so the user can type in a specific tempo but I removed the standard up and down arrows and created larger button controls in the interest of mobile use and a better looking interface."><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></button>
+                    </div>
+                    <div class="info">
+                        <input type="number" class="bpm-display" min="80" max="240" value="160">
+                        <h4>bpm</h4>
+                    </div>
+                    <div class="tempo-controls">
+                        <button class="tempo-btn tempo-up"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></button>
+                        <button class="tempo-btn tempo-down"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- beats 1 through 4 -->
+            <div class="row beat-container">
+                <div class="col-xs-3">
+                    <div class="beat beat1">1</div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="beat beat2">2</div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="beat beat3">3</div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="beat beat4">4</div>
+                </div>
+            </div>
+
+            <!-- start/stop button -->
+            <div class="row start-btn-container">
+                <div class="col-sm-12">
+                    <button id="startstop" class="btn btn-danger">start</button>
+                </div>
+            </div>
+        </div> <!-- end container -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="js/metronome.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

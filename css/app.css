@@ -1,0 +1,153 @@
+* {
+	text-align: center;
+}
+
+body {
+	background: #000;
+	padding: 5%;
+}
+
+.container {
+	width: 100%;
+}
+
+#metronome-container {
+    border: 1px solid #333;
+    border-radius: 3px;
+    margin: 0 15px 50px;
+    position: relative;
+}
+
+.about {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+.about-btn {
+	background: none;
+	color: #fff;
+	border: none;
+	font-size: 1.6em;
+}
+
+.info {
+	position: absolute;
+	top: 0px;
+	right: 15px;
+	text-align: right;
+	color: #fff;
+}
+
+.info h4 {
+	font-weight: 100;
+	margin-top: -10px;
+}
+
+.bpm-display {
+	margin-top: 0px;
+	background: none;
+	border: none;
+	color: #fff;
+	width: 65px;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+/* hide spinner on number box */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.popover {
+	max-width: none;
+	width: 500px;
+}
+
+.tempo-controls {
+	position: absolute;
+	bottom:15px;
+	right: 15px;
+}
+
+.tempo-btn {
+	width: 60px;
+	display: block;
+	height: 60px;
+	font-size: 2em;
+	background: #222;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+.tempo-btn:hover {
+	background: #333;
+}
+
+.tempo-up {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.tempo-down {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.beat {
+	background: #000;
+	height: 200px;
+	color: #fff;
+	line-height: 200px;
+	text-align: center;
+	font-size: 4em;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.start-btn-container {
+	margin-top: 50px;
+}
+
+#startstop {
+	width: 100%;
+	height: 100px;
+	font-size: 3em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.started, .started:active, .started:focus {
+	background: #111;
+	border: 1px solid #fff;
+}
+
+.started:hover {
+	background: #222;
+}
+
+@media all and (max-width: 50em) {
+	.beat {
+		height: 100px;
+		line-height: 100px;
+		font-size: 2.5em;
+	}
+}
+
+@media all and (max-width: 40em) {
+	.beat {
+		height: 70px;
+		line-height: 70px;
+		font-size: 2em;
+	}
+
+	.popover {
+		max-width: 220px;
+		width: 220px;
+	}
+}
